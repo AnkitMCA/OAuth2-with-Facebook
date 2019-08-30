@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Success Page</title>
+</head>
+<body>
+
+<p th:object="${user}">
+<h3>User Information</h3><br>
+<span><b>User ID : </b></span><span th:text="${user.getId()}"></span><br>
+<span><b>User Name : </b></span><span th:text="${user.getName()}"></span><br>
+<span><b>User Email : </b></span><span th:text="${user.getEmail()}"></span><br>
+<span><b>User Profile Picture : </b></span><a th:text="${user.getImageUrl()}"
+                                              th:href="${user.getImageUrl()}"></a><br>
+</p>
+<span><b>Token : </b></span><span th:text="${token}"></span>
+
+</body>
+</html>
